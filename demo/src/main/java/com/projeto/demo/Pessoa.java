@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
-@Table(name = "pessoa")
+@Table(name = "projeto")
 @Data
 public class Pessoa {
 
@@ -12,12 +12,12 @@ public class Pessoa {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, unique = true)
+    @Column(name="cpf", nullable = false, unique = true)
     private String cpf;
 
-    @Column(nullable = false)
+    @Column(name = "idade", nullable = false)
     private Integer idade;
 
-    @Column(nullable = false)
+    @Column(name ="nome", nullable = false)
     private String nome;
 }
